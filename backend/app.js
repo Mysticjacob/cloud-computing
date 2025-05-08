@@ -11,7 +11,8 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
+
 
 // Database connection
 connectDB();
