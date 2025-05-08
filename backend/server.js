@@ -10,10 +10,10 @@ dotenv.config();
 const app = express();
 
 // ✅ CORS configuration — place this BEFORE route handlers
-app.use(cors({
-  origin: ["http://localhost:3000", "https://iwb-2213.vercel.app"],
-  credentials: true
-}));
+app.use(express.json());
+app.use(cors({ origin: "*" }));
+
+
 
 // Middleware
 app.use(express.json());
